@@ -73,10 +73,11 @@ export const RiskMap: React.FC<RiskMapProps> = ({
         scrollWheelZoom={true}
         className="w-full h-full"
       >
-        {/* Dark Mode Tile Layer from CartoDB */}
+        {/* Standard OpenStreetMap Free Tiles with Dark Theme CSS styling */}
         <TileLayer
-          attribution='&copy; <a href="https://carto.com/">CartoDB</a> &copy; OpenStreetMap'
-          url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+          className="map-tiles-dark"
         />
 
         <MapBoundsAdjuster coords={activeRoute.geometry} />

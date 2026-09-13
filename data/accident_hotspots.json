@@ -1,0 +1,80 @@
+[
+  {
+    "id": "HS-001",
+    "name": "Karanja Lad Junction (NH-53 Merge)",
+    "latitude": 20.4831,
+    "longitude": 77.4897,
+    "corridor": "Nagpur-Pune NH-53 / Samruddhi Interchange",
+    "historical_incidents": 38,
+    "severity": "CRITICAL",
+    "high_risk_hours": "20:00 - 23:00",
+    "primary_cause": "High speed highway merge, heavy freight blind spots",
+    "base_risk": 82,
+    "advice": "High collision frequency reported. Reduce speed to 60 km/h, watch for unlit commercial vehicles."
+  },
+  {
+    "id": "HS-002",
+    "name": "Sindkhed Raja Ghat Curve",
+    "latitude": 19.9614,
+    "longitude": 76.1432,
+    "corridor": "Jalna-Sinnar Highway Link",
+    "historical_incidents": 29,
+    "severity": "HIGH",
+    "high_risk_hours": "21:00 - 02:00",
+    "primary_cause": "Hairpin descent prone to brake fade and wet skidding",
+    "base_risk": 74,
+    "advice": "Steep gradient descent. Use lower gears and maintain 50m vehicle gap."
+  },
+  {
+    "id": "HS-003",
+    "name": "Ahmednagar Bypass Bottleneck",
+    "latitude": 19.0948,
+    "longitude": 74.7480,
+    "corridor": "Pune-Nagpur State Highway 27",
+    "historical_incidents": 24,
+    "severity": "MODERATE",
+    "high_risk_hours": "17:00 - 21:00",
+    "primary_cause": "Heavy mixed local traffic, unregulated median crossings",
+    "base_risk": 64,
+    "advice": "Expect sudden cross-traffic and tractor deceleration."
+  },
+  {
+    "id": "HS-004",
+    "name": "Shikrapur Industrial Crossing",
+    "latitude": 18.7032,
+    "longitude": 74.1287,
+    "corridor": "Pune-Ahmednagar Highway NH-753F",
+    "historical_incidents": 41,
+    "severity": "HIGH",
+    "high_risk_hours": "18:00 - 22:00",
+    "primary_cause": "Multi-axle container truck turning radius & high footfall",
+    "base_risk": 71,
+    "advice": "Heavy commuter and freight convergence. Safer bypass recommended via Chakan-Talegaon link."
+  },
+  {
+    "id": "HS-005",
+    "name": "Talegaon Toll Plaza Convergence",
+    "latitude": 18.7364,
+    "longitude": 73.6761,
+    "corridor": "Mumbai-Pune Expressway approach",
+    "historical_incidents": 19,
+    "severity": "MODERATE",
+    "high_risk_hours": "05:00 - 08:00",
+    "primary_cause": "Morning fog and abrupt lane mergers",
+    "base_risk": 55,
+    "advice": "Low early morning visibility. Keep low beams engaged."
+  },
+  {
+    "id": "HS-006",
+    "name": "Amravati Ring Road Interchange",
+    "latitude": 20.9374,
+    "longitude": 77.7796,
+    "corridor": "NH-53 East corridor",
+    "historical_incidents": 22,
+    "severity": "MODERATE",
+    "high_risk_hours": "19:00 - 22:00",
+    "primary_cause": "Unlit flyover expansion joints and cattle presence",
+    "base_risk": 58,
+    "advice": "Beware of unlit road obstacles on non-barricaded shoulders."
+  }
+]

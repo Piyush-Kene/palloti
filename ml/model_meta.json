@@ -1,0 +1,27 @@
+{
+  "model_type": "RandomForestRegressor",
+  "features": [
+    "accident_count",
+    "accident_severity",
+    "rainfall_mm",
+    "visibility_km",
+    "road_condition",
+    "traffic_density",
+    "hour_of_day",
+    "is_weekend",
+    "is_high_speed"
+  ],
+  "feature_importances": {
+    "accident_count": 0.1848,
+    "accident_severity": 0.1598,
+    "rainfall_mm": 0.1834,
+    "visibility_km": 0.147,
+    "road_condition": 0.0876,
+    "traffic_density": 0.0449,
+    "hour_of_day": 0.1717,
+    "is_weekend": 0.0044,
+    "is_high_speed": 0.0163
+  },
+  "r2_score": 0.8535,
+  "mse": 34.54
+}

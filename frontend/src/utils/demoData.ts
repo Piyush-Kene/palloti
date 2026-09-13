@@ -1,0 +1,303 @@
+import { RouteAnalysisResponse } from '../types';
+
+export const DEMO_NAGPUR_PUNE_DATA: RouteAnalysisResponse = {
+  is_demo_data: true,
+  origin_name: "Nagpur, Maharashtra, India",
+  destination_name: "Pune, Maharashtra, India",
+  departure_time: "20:00 - Night Travel Window",
+  analysis_timestamp: new Date().toISOString(),
+  weather_summary: {
+    temperature_c: 26.4,
+    humidity_pct: 88,
+    precipitation_mm: 32.4,
+    visibility_km: 2.4,
+    wind_speed_kmh: 24.8,
+    weather_code: 63,
+    condition: "Heavy Monsoon Downpour & Standing Water",
+    source: "Open-Meteo & Radar Synthesis (Demo Mode Active)"
+  },
+  primary_route: {
+    route_id: "route_nh53_fastest",
+    title: "Standard Highway Route (NH-53 / State Corridor)",
+    is_recommended_safer: false,
+    distance_km: 720.5,
+    duration_min: 750,
+    risk_score: 74,
+    risk_level: "HIGH",
+    risk_color: "#EF4444",
+    geometry: [
+      [21.1458, 79.0882],
+      [20.9374, 77.7796],
+      [20.4831, 77.4897],
+      [19.9614, 76.1432],
+      [19.0948, 74.7480],
+      [18.7032, 74.1287],
+      [18.5204, 73.8567]
+    ],
+    hotspots: [
+      {
+        id: "HS-001",
+        name: "Karanja Lad Junction (NH-53 Merge)",
+        lat: 20.4831,
+        lon: 77.4897,
+        severity: "CRITICAL",
+        historical_incidents: 38,
+        high_risk_hours: "20:00 - 23:00",
+        primary_cause: "High speed highway merge, heavy freight blind spots",
+        advice: "High collision frequency reported. Reduce speed to 60 km/h."
+      },
+      {
+        id: "HS-002",
+        name: "Sindkhed Raja Ghat Curve",
+        lat: 19.9614,
+        lon: 76.1432,
+        severity: "HIGH",
+        historical_incidents: 29,
+        high_risk_hours: "21:00 - 02:00",
+        primary_cause: "Hairpin descent prone to brake fade and wet skidding",
+        advice: "Steep gradient descent. Use lower gears and maintain 50m vehicle gap."
+      },
+      {
+        id: "HS-004",
+        name: "Shikrapur Industrial Crossing",
+        lat: 18.7032,
+        lon: 74.1287,
+        severity: "HIGH",
+        historical_incidents: 41,
+        high_risk_hours: "18:00 - 22:00",
+        primary_cause: "Multi-axle container truck turning radius & high footfall",
+        advice: "Heavy commuter and freight convergence."
+      }
+    ],
+    segments: [
+      {
+        segment_id: 1,
+        name: "Segment 1: Nagpur Outer Ring to Wardha Stretch",
+        start_point: [21.1458, 79.0882],
+        end_point: [20.9374, 77.7796],
+        distance_km: 144.1,
+        duration_min: 150,
+        risk_score: 32,
+        risk_level: "LOW",
+        risk_color: "#10B981",
+        rainfall_mm: 8.2,
+        visibility_km: 7.5,
+        weather_condition: "Light Drizzle",
+        accident_count: 5,
+        primary_risk_factor: "Controlled dual carriage road with minimal local crossings",
+        advice: "Normal driving conditions. Stay in middle lane."
+      },
+      {
+        segment_id: 2,
+        name: "Segment 2: Karanja Lad - Amravati Highway Interlink",
+        start_point: [20.9374, 77.7796],
+        end_point: [20.4831, 77.4897],
+        distance_km: 144.1,
+        duration_min: 150,
+        risk_score: 78,
+        risk_level: "HIGH",
+        risk_color: "#EF4444",
+        rainfall_mm: 34.0,
+        visibility_km: 2.1,
+        weather_condition: "Torrential Rain & Spray",
+        accident_count: 38,
+        primary_risk_factor: "High collision frequency hotspot + heavy hydroplaning hazard",
+        advice: "DANGER ZONE: Reduce speed to 50 km/h, turn on hazard lights if required."
+      },
+      {
+        segment_id: 3,
+        name: "Segment 3: Sindkhed Raja Ghat Section",
+        start_point: [20.4831, 77.4897],
+        end_point: [19.9614, 76.1432],
+        distance_km: 144.1,
+        duration_min: 150,
+        risk_score: 84,
+        risk_level: "HIGH",
+        risk_color: "#EF4444",
+        rainfall_mm: 31.2,
+        visibility_km: 1.8,
+        weather_condition: "Dense Fog & Rain",
+        accident_count: 29,
+        primary_risk_factor: "Sharp blind curves, brake fade risk, non-illuminated road dividers",
+        advice: "Downshift to gear 2 or 3 on descent. Do not overtake on continuous lines."
+      },
+      {
+        segment_id: 4,
+        name: "Segment 4: Ahmednagar Bypass & Shikrapur Arterial",
+        start_point: [19.9614, 76.1432],
+        end_point: [18.7032, 74.1287],
+        distance_km: 144.1,
+        duration_min: 150,
+        risk_score: 72,
+        risk_level: "HIGH",
+        risk_color: "#EF4444",
+        rainfall_mm: 19.5,
+        visibility_km: 3.5,
+        weather_condition: "Moderate Rain Showers",
+        accident_count: 41,
+        primary_risk_factor: "High container truck traffic, frequent illegal median U-turns",
+        advice: "Extreme defensive driving required. High pedestrian and tractor mix."
+      },
+      {
+        segment_id: 5,
+        name: "Segment 5: Wagholi to Pune Central City Approach",
+        start_point: [18.7032, 74.1287],
+        end_point: [18.5204, 73.8567],
+        distance_km: 144.1,
+        duration_min: 150,
+        risk_score: 42,
+        risk_level: "MODERATE",
+        risk_color: "#F59E0B",
+        rainfall_mm: 12.0,
+        visibility_km: 5.0,
+        weather_condition: "Intermittent Rain",
+        accident_count: 14,
+        primary_risk_factor: "Urban rush-hour density and two-wheeler lane filtering",
+        advice: "Expect stop-and-go delays; monitor blind-spot mirrors continuously."
+      }
+    ],
+    sub_scores: {
+      accident_risk: 86,
+      weather_risk: 78,
+      road_risk: 65,
+      traffic_risk: 54
+    },
+    primary_factors: [
+      "Frequent accident blackspot (38 fatal crashes at Karanja Lad NH-53 junction)",
+      "High rainfall (32.4 mm) causing extreme hydroplaning on asphalt sections",
+      "Low visibility (2.4 km) combined with unlit heavy commercial freight transit"
+    ],
+    recommendation: "HIGH HAZARD DETECTED: This corridor has multiple critical accident blackspots and severe waterlogging. Switch to the SafeRoute AI Recommended Expressway alternative."
+  },
+  safer_alternative_route: {
+    route_id: "route_expressway_safer",
+    title: "SafeRoute AI Recommended (Expressway Bypass Corridor)",
+    is_recommended_safer: true,
+    distance_km: 745.2,
+    duration_min: 775,
+    risk_score: 34,
+    risk_level: "LOW",
+    risk_color: "#10B981",
+    geometry: [
+      [21.1458, 79.0882],
+      [20.8500, 77.9500],
+      [20.2500, 76.9000],
+      [19.6500, 75.8000],
+      [19.1200, 74.3000],
+      [18.7500, 73.9500],
+      [18.5204, 73.8567]
+    ],
+    hotspots: [
+      {
+        id: "HS-005",
+        name: "Controlled Chakan Bypass Intersection",
+        lat: 18.7500,
+        lon: 73.9500,
+        severity: "MODERATE",
+        historical_incidents: 8,
+        high_risk_hours: "18:00 - 21:00",
+        primary_cause: "High volume during shift changes",
+        advice: "Maintained signal controls; adhere to 60 km/h limit."
+      }
+    ],
+    segments: [
+      {
+        segment_id: 1,
+        name: "Segment 1: Nagpur Outer to Samruddhi Interchange",
+        start_point: [21.1458, 79.0882],
+        end_point: [20.8500, 77.9500],
+        distance_km: 149.0,
+        duration_min: 155,
+        risk_score: 28,
+        risk_level: "LOW",
+        risk_color: "#10B981",
+        rainfall_mm: 6.0,
+        visibility_km: 9.0,
+        weather_condition: "Partly Cloudy",
+        accident_count: 2,
+        primary_risk_factor: "Controlled access expressway, zero grade-level crossings",
+        advice: "Maintain safe following distance of 100 meters at high speed."
+      },
+      {
+        segment_id: 2,
+        name: "Segment 2: Central Super-Communication Highway Stretch",
+        start_point: [20.8500, 77.9500],
+        end_point: [20.2500, 76.9000],
+        distance_km: 149.0,
+        duration_min: 155,
+        risk_score: 35,
+        risk_level: "LOW",
+        risk_color: "#10B981",
+        rainfall_mm: 14.0,
+        visibility_km: 6.5,
+        weather_condition: "Scattered Showers",
+        accident_count: 4,
+        primary_risk_factor: "Long straight stretches with anti-crash fencing and automated drainage",
+        advice: "Avoid fatigue: take scheduled 15-minute halts at wayside amenities."
+      },
+      {
+        segment_id: 3,
+        name: "Segment 3: Chhatrapati Sambhaji Nagar Controlled Bypass",
+        start_point: [20.2500, 76.9000],
+        end_point: [19.6500, 75.8000],
+        distance_km: 149.0,
+        duration_min: 155,
+        risk_score: 30,
+        risk_level: "LOW",
+        risk_color: "#10B981",
+        rainfall_mm: 8.0,
+        visibility_km: 8.0,
+        weather_condition: "Overcast",
+        accident_count: 3,
+        primary_risk_factor: "Grade-separated flyovers avoiding all city congestion",
+        advice: "Smooth cruising; maintain 90-100 km/h."
+      },
+      {
+        segment_id: 4,
+        name: "Segment 4: Shirdi - Sinnar Expressway Link",
+        start_point: [19.6500, 75.8000],
+        end_point: [19.1200, 74.3000],
+        distance_km: 149.0,
+        duration_min: 155,
+        risk_score: 36,
+        risk_level: "LOW",
+        risk_color: "#10B981",
+        rainfall_mm: 11.5,
+        visibility_km: 6.2,
+        weather_condition: "Mild Drizzle",
+        accident_count: 6,
+        primary_risk_factor: "High quality bituminous concrete with anti-skid grooving",
+        advice: "Excellent grip despite damp surface."
+      },
+      {
+        segment_id: 5,
+        name: "Segment 5: Talegaon - Chakan Expressway Approach to Pune",
+        start_point: [19.1200, 74.3000],
+        end_point: [18.5204, 73.8567],
+        distance_km: 149.0,
+        duration_min: 155,
+        risk_score: 39,
+        risk_level: "LOW",
+        risk_color: "#10B981",
+        rainfall_mm: 9.0,
+        visibility_km: 7.0,
+        weather_condition: "Clear Night",
+        accident_count: 8,
+        primary_risk_factor: "Wide 6-lane approach with smart LED illumination",
+        advice: "Seamless entry into Pune metropolis."
+      }
+    ],
+    sub_scores: {
+      accident_risk: 28,
+      weather_risk: 32,
+      road_risk: 26,
+      traffic_risk: 34
+    },
+    primary_factors: [
+      "Bypasses Karanja Lad and Shikrapur critical blackspots completely",
+      "Modern grooved concrete pavement with rapid rainwater runoff channels",
+      "Divided carriageway with crash attenuation barriers and continuous illumination"
+    ],
+    recommendation: "SAFER ROUTE RECOMMENDED: Adding only +24.7 km (+25 minutes) drops your trip risk from 74 (HIGH) to 34 (LOW)."
+  }
+};
